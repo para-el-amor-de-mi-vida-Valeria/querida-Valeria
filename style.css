@@ -1,0 +1,142 @@
+:root {
+    --color-pink: #fdecf2;
+    --color-red: #e60026;
+    --color-dark-text: #333;
+    --color-white: #ffffff;
+    --font-headings: 'Pacifico', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark-text);
+    line-height: 1.7;
+    background-color: var(--color-white);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: var(--font-headings);
+    color: var(--color-red);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======== ESTILOS DE LAS SECCIONES ======== */
+
+.hello {
+    background-color: var(--color-pink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.hello-kitty {
+    max-width: 170px;
+    margin-bottom: 0.5rem;
+}
+
+/* Secciones alternadas */
+.section-light {
+    background-color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.section-dark {
+    background-color: var(--color-pink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.section-kitty {
+    max-width: 210px;
+    margin-top: 0.5rem;
+}
+
+/* Footer (despedida) */
+.footer {
+    background-color: #333;
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.footer .signature {
+    font-family: var(--font-headings);
+    font-size: 1.5rem;
+    color: var(--color-pink);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.footer-kitty {
+    max-width: 230px;
+}
+
+.te-amo {
+    color: var(--color-pink);
+    font-size: 2rem;
+}
+
+/* ======== RESPONSIVE PARA PANTALLAS MÁS GRANDES (TABLETS/DESKTOPS) ======== */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 80px 0;
+    }
+}
