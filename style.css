@@ -21,6 +21,34 @@ body {
     background-color: var(--color-white);
 }
 
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 900;
+  transition: background 0.3s ease;
+}
+
+.headerScroll {
+    backdrop-filter: blur(15px);
+    background-color: rgba(247, 107, 158, 0.1);
+}
+
+.menubar {
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--color-dark-text);
+  margin-right: 10px;
+}
+
 .container {
     width: 90%;
     max-width: 600px;
@@ -122,7 +150,7 @@ img {
     font-size: 2rem;
 }
 
-/* ======== RESPONSIVE PARA PANTALLAS MÁS GRANDES (TABLETS/DESKTOPS) ======== */
+/* RESPONSIVE */
 @media (min-width: 768px) {
     h1 {
         font-size: 4rem;
