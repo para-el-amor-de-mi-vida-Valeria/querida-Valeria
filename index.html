@@ -6,7 +6,7 @@
     <title>Querida Valeria...</title>
     <link rel="shortcut icon" href="./img/hello-kitty.png" />
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,15 +16,26 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    
+    <header class="top-header">
+        <div class="menubar">
+            <i class="bx bx-chevron-left" id="volverBtn" onclick="window.history.back()"></i>
+        </div>
+        <div class="menubar">
+            <i class="bx bx-menu" id="menu-icon"></i>
+        </div>
+    </header>
 
-  <header class="top-header">
-    <div class="menubar">
-      <i class="bx bx-chevron-left" id="volverBtn" onclick="window.history.back()"></i>
+    <div class="drawer" id="drawer">
+        <button id="closeDrawerBtn" class="close-button"></button>
+        <div class="drawer-content">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nuestra-historia">Nuestra historia</a></li>
+                <li><a href="https://para-el-amor-de-mi-vida-valeria.github.io/querida-Valeria/">Querida Valeria</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="menubar">
-      <i class="bx bx-menu" id="menu-icon"></i>
-    </div>
-  </header>
 
     <header class="hello">
         <div class="container">
@@ -111,7 +122,7 @@
       });
     </script>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 
 </body>
 </html>
