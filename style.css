@@ -3,6 +3,8 @@
     --color-red: #e60026;
     --color-dark-text: #333;
     --color-white: #ffffff;
+    --color-pinkDrawer: #f56b9e;
+    --color-pinkDrawerHover: #e05589;
     --font-headings: 'Pacifico', cursive;
     --font-body: 'Poppins', sans-serif;
 }
@@ -21,25 +23,80 @@ body {
     background-color: var(--color-white);
 }
 
-.top-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 40px;
+/* Drawer */
+.drawer {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 900;
+}
+
+.drawer-content {
+    background-color: var(--color-pinkDrawer);
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.drawer.open .drawer-content {
+    max-height: 200px;
+}
+
+.drawer.open .drawer-content {
+    display: block;
+}
+
+.drawer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawer-content ul li {
+    padding: 8px 0;
+
+    &:hover {
+        background-color: var(--color-pinkDrawerHover);
+        transition: .4s ease;
+    }
+}
+
+.drawer-content ul li a {
+  display: block;
   width: 100%;
-  background-color: var(--color-white);
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 900;
-  transition: background 0.3s ease;
+  height: 40px;
+  align-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.drawer-content ul li a.active {
+  background-color: var(--color-pinkDrawerHover);
+}
+
+
+/* Header */
+.top-header {
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: ease;
 }
 
 .headerScroll {
     backdrop-filter: blur(15px);
-    background-color: rgba(247, 107, 158, 0.1);
+    background-color: rgba(245, 107, 158, .1);
 }
 
 .menubar {
@@ -81,7 +138,7 @@ img {
     height: auto;
 }
 
-/* ======== ESTILOS DE LAS SECCIONES ======== */
+/* Secciones */
 
 .hello {
     background-color: var(--color-pink);
