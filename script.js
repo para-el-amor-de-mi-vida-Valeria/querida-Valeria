@@ -44,6 +44,7 @@ navLinks.forEach(link => {
   });
 });
 
+// Botón de volver a atrás
 if (!location.pathname.endsWith("index.html") && location.pathname !== "/") {
   document.getElementById("volverBtn").style.display = "inline-block";
 }
