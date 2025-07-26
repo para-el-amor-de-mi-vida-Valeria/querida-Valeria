@@ -13,29 +13,6 @@ window.addEventListener('scroll', function () {
   header.classList.toggle('headerScroll', window.scrollY > 0);
 });
 
-// Activar el link de la sección visible
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.drawer-nav a');
-
-window.onscroll = () => {
-  let top = window.scrollY;
-
-  sections.forEach(section => {
-    let offset = section.offsetTop - 150;
-    let height = section.offsetHeight;
-    let id = section.getAttribute('id');
-
-    if (top >= offset && top < offset + height) {
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        document
-          .querySelector('.drawer-nav a[href*=' + id + ']')
-          .classList.add('active');
-      });
-    }
-  });
-};
-
 // Cierra el menú al hacer clic en un enlace
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
