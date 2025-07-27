@@ -21,7 +21,7 @@ navLinks.forEach(link => {
     const currentURL = window.location.href;
     const linkHref = link.href;
 
-    if (currentURL === linkHref || currentURL.startsWith(linkHref)) {
+    if (currentURL === linkHref) {
       e.preventDefault();
     }
 
@@ -35,7 +35,7 @@ navLinks.forEach(link => {
   const linkHref = link.href;
   const currentURL = window.location.href;
 
-  if (currentURL === linkHref || currentURL.startsWith(linkHref)) {
+  if (currentURL === linkHref) {
     link.classList.add('active');
   }
 });
