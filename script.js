@@ -52,3 +52,10 @@ document.addEventListener("click", (e) => {
     menuIcon.classList.remove('bx-x');
     }
   });
+
+// Evitar retroceder
+window.history.pushState(null, null, window.location.href);
+
+window.addEventListener('popstate', function (event) {
+  window.history.pushState(null, null, window.location.href);
+});
