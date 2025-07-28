@@ -1,4 +1,3 @@
-// Abrir y cerrar el drawer
 const menuIcon = document.querySelector('#menu-icon');
 const drawer = document.querySelector('#drawer');
 const navLinks = document.querySelectorAll('.drawer-content a');
