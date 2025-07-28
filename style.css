@@ -211,7 +211,7 @@ img {
 .drawer-content ul,
 .drawer-content ul li,
 .drawer-content ul li a,
-.close-button 
+.close-button, 
 .hello {
     user-select: none;
 }
