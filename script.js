@@ -40,11 +40,6 @@ navLinks.forEach(link => {
   }
 });
 
-// Botón de volver a atrás
-if (!location.pathname.endsWith("index.html") && location.pathname !== "/") {
-  document.getElementById("volverBtn").style.display = "inline-block";
-}
-
 // Cerrar drawer al hacer clic fuera
 document.addEventListener("click", (e) => {
   if (!drawer.contains(e.target) && !menuIcon.contains(e.target)) {
