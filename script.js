@@ -53,9 +53,11 @@ document.addEventListener("click", (e) => {
     }
   });
 
-// Evitar retroceder
-window.history.pushState(null, null, window.location.href);
+// Prevenir navegación "atrás"
+window.addEventListener('DOMContentLoaded', () => {
+  history.pushState({}, '', window.location.href);
 
-window.addEventListener('popstate', function (event) {
-  window.history.pushState(null, null, window.location.href);
+  window.addEventListener('popstate', (event) => {
+    history.pushState({}, '', window.location.href);
+  });
 });
